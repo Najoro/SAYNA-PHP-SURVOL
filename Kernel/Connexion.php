@@ -18,11 +18,16 @@ class Connexion{
             try {
                 self::$pdo = new \PDO($dns,$username,$password);
                 self::$pdo->setAttribute(\PDO::ATTR_ERRMODE , \PDO::ERRMODE_EXCEPTION);
-                echo "connextion reussie";
+                // echo "connextion reussie";
             } catch (\PDOExeption $e) {
                 echo "erreur de connextion :".$e.getMessage();
             }
         }
         return self::$pdo;
+    }
+
+    public static function query($query){
+        $stmt = self::get()->query($query);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC    );
     }
 }

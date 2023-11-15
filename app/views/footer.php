@@ -1,3 +1,6 @@
-    <h1>footer</h1>
+</div>
+    <script src="../www/dist/js/adminlte.js"></script>
+    <script src="../www/dist/js/adminlte.min.js"></script>
+    <script src="../www/dist/js/demo.js"></script>
 </body>
 </html>
